@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .out,
+      .out1,
+      .out2 {
+        width: 1200px;
+        height: 20px;
+        border: 2px solid blue;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 100px auto;
+        position: relative;
+      }
+
+      .inner,
+      .inner2,
+      .inner1{
+        height: 20px;
+        width: 0;
+        background-color: yellowgreen;
+      }
+
+      span {
+        color: red;
+        font-size: 18px;
+        line-height: 20px;
+        position: absolute;
+        left: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="out">
+      <div class="inner"></div>
+    </div>
+    <div class="out1">
+      <div class="inner1"></div>
+    </div>
+    <div class="out2">
+      <div class="inner2"></div>
+    </div>
+  </body>
+</html>
+
+<script src="./jQuery/jquery-1.8.1.min.js"></script>
+<script>
+  $(function() {
+    $(".inner").animate({
+        // 动画的终点是inner的宽度等于out的宽度
+        width: $(".out").width()
+      },
+      1000,
+      function() {
+        // alert('加载完毕');
+        $(".inner1").animate({
+            // 动画的终点是inner的宽度等于out的宽度
+            width: $(".out1").width()
+          },1000,function() {
+            // alert('加载完毕');
+            $(".inner2").animate({
+                // 动画的终点是inner的宽度等于out的宽度
+                width: $(".out2").width()
+              },1000,function() {
+                // alert('加载完毕');
+              }
+            );
+          }
+        );
+      }
+    );
+  });
+</script>

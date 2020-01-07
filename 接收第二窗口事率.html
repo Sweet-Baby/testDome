@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/4.2.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<input type="text" id="RX2DateRate" name="RX2DateRate" placeholder="第二接收窗口速率" list="RX2DateRateSelect"/>
+<datalist id="RX2DateRateSelect" onclick="he(this.value)">
+    <option value="DR0"></option>
+    <option value="DR1"></option>
+    <option value="DR2"></option>
+    <option value="DR3"></option>
+    <option value="DR4"></option>
+    <option value="DR5"></option>
+</datalist>
+
+
+<form>
+    <select name="cars"  onclick="he(this.value)" >
+        <option value="volvo" >Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+</form>
+
+
+</body>
+<script>
+    function he(bu) {
+        alert(bu)
+    }
+</script>
+</html>

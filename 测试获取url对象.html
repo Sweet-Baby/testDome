@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 接收url传参转化为对象
+    var seach = '?ueser=1&name=2&key=3&bind=4&query=5';
+    seach = seach.slice(1);
+    var url = seach.split('&');
+    var params = {};
+    for (var str of url) {
+      str = str.split('=')
+      params[str[0]] = isNaN(str[1]) ? str[1] : Number(str[1]);
+    }
+    console.log(params);
+
+
+    // 判断数组
+    var a = {} , b = [];
+    console.log(
+      Object.prototype.toString.call(a) === "[object Array]",
+      {}.toString.call(b) === "[object Array]"
+    );
+  </script>
+</body>
+</html>
